@@ -6,7 +6,7 @@ const articleRouter = require('./routes/articles');
 const methodOverride = require('method-override');
 const app = express();
 
-mongoose.connect('mongodb+srv://rshdd:rshdd@blogpostup.mwjnm.mongodb.net/BlogpostUP?retryWrites=true&w=majority', {
+/*mongoose.connect('mongodb+srv://rshdd:rshdd@blogpostup.mwjnm.mongodb.net/BlogpostUP?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
@@ -14,16 +14,16 @@ mongoose.connect('mongodb+srv://rshdd:rshdd@blogpostup.mwjnm.mongodb.net/Blogpos
   console.log("DB Connected!")
 }).catch(err => {
   console.log(Error, err.message);
-})
+})*/
 
-/*const { MongoClient } = require('mongodb');
+const { MongoClient } = require('mongodb');
 const uri = "mongodb+srv://rshdd:rshdd@blogpostup.mwjnm.mongodb.net/BlogpostUP?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
-});*/
+});
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
