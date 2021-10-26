@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node blogpost/server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Raschid Llamas",
@@ -24,6 +24,9 @@
   "devDependencies": {
     "nodemon": "^2.0.14"
   },
+  "engines": {
+    "node": "14.x"
+},
   "description": "Blog post UP",
   "repository": {
     "type": "git",

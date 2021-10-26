@@ -6,7 +6,7 @@ const articleRouter = require('./routes/articles');
 const methodOverride = require('method-override');
 const app = express();
 
-mongoose.connect('mongodb://localhost/blog', {
+mongoose.connect('mongodb+srv://rshdd:rshdd@blogpostup.mwjnm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
@@ -28,12 +28,10 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
-app.set("port", process.end.PORT || 3000);
+let port = process.env.PORT;
 
-server.listen(app.get("port"),() =>{
-  console.log(`Let's meet at the ${app.get("port")}`);
-})
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
-});
+app.listen(port);
