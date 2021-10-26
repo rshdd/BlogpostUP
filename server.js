@@ -1,9 +1,10 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const Article = require('./models/article')
-const articleRouter = require('./routes/articles')
-const methodOverride = require('method-override')
-const app = express()
+const express = require('express');
+const mongoose = require('mongoose');
+const server = http.createServer(app);
+const Article = require('./models/article');
+const articleRouter = require('./routes/articles');
+const methodOverride = require('method-override');
+const app = express();
 
 mongoose.connect('mongodb://localhost/blog', {
   useNewUrlParser: true,
@@ -26,6 +27,12 @@ app.get('/', async (req, res) => {
 })
 
 app.use('/articles', articleRouter)
+
+app.set("port", process.end.PORT || 3000);
+
+server.listen(app.get("port"),() =>{
+  console.log(`Let's meet at the ${app.get("port")}`);
+})
 
 app.listen(3000, () => {
   console.log("Listening on port 3000");
