@@ -24,9 +24,12 @@
   "devDependencies": {
     "nodemon": "^2.0.14"
   },
+<<<<<<< HEAD
   "engines": {
     "node": "14.x"
 },
+=======
+>>>>>>> 1076678bd48aab294b0f66635ed50cf91411f413
   "description": "Blog post UP",
   "repository": {
     "type": "git",
@@ -36,4 +39,8 @@
     "url": "https://github.com/christophzehendner/blogpost/issues"
   },
   "homepage": "https://github.com/christophzehendner/blogpost#readme"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1076678bd48aab294b0f66635ed50cf91411f413

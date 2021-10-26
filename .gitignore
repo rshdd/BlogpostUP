@@ -1,4 +1,7 @@
 node_modules
+<<<<<<< HEAD
 npm-debug.log
 .DS_Store
 /*.env
+=======
+>>>>>>> 1076678bd48aab294b0f66635ed50cf91411f413
