@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node blogpost/server.js"
   },
   "keywords": [],
   "author": "Raschid Llamas",
